@@ -36,6 +36,10 @@ public class Produit implements Serializable {
     @Column(nullable = false)
     private LocalDateTime dateModification;
 
+    @ManyToOne
+    @JoinColumn(name = "marque_id")
+    private Marque marque;
+
     @PrePersist
     public void prePersist(){
         System.out.println("mis a jour date avant creation");
