@@ -23,6 +23,7 @@ public class MainTestMarque {
             produit.setCode("S001");
             produit.setNom("Ecran 24");
             produit.setDescription("Ecran de test");
+            produit.setPrix(new java.math.BigDecimal("150.00"));
             produit.setDateCreation(LocalDateTime.now());
             produit.setDateModification(LocalDateTime.now());
             produit.setMarque(marque);
