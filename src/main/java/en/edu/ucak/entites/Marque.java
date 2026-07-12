@@ -22,6 +22,9 @@ public class Marque implements Serializable {
     @Column(nullable = false, length = 100)
     private String nom;
 
+    @Column(length = 500)
+    private String description;
+
     @OneToMany(mappedBy = "marque")
     private List<Produit> produits = new ArrayList<>();
 }
