@@ -9,7 +9,6 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.math.BigDecimal;
 import java.util.Objects;
-import en.edu.ucak.entites.Marque;
 
 @Entity
 @Getter
@@ -35,10 +34,6 @@ public class Produit implements Serializable {
 
     @Column(nullable = false)
     private LocalDateTime dateModification;
-
-    @ManyToOne
-    @JoinColumn(name = "marque_id")
-    private Marque marque;
 
     @PrePersist
     public void prePersist(){
